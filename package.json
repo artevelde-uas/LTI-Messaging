@@ -1,0 +1,8 @@
+{
+  "name": "lti-messaging",
+  "version": "0.1.0",
+  "description": "LTI Iframe parent.postMessage communication messages",
+  "author": "Renaat De Muynck <renaat.demuynck@gmail.com>",
+  "homepage": "https://github.com/renaatdemuynck/LTI-Messaging",
+  "main": "src/tool-provider.js"
+}
