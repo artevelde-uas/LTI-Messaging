@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>LTI Messaging Demo</title>
+    <script>
+    
+        window.addEventListener('message', function (event) {
+            var params = JSON.parse(event.data);
+            
+            console.log(params);
+        });
+    
+    </script>
+    <style></style>
+</head>
+<body>
+    <h1>LTI Messaging Demo</h1>
+    <iframe src="iframe.html"></iframe>
+</body>
+</html>

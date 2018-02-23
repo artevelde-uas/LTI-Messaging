@@ -1,6 +1,6 @@
 {
   "name": "lti-messaging",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "LTI Iframe parent.postMessage communication messages",
   "license": "MIT",
   "author": "Renaat De Muynck <renaat.demuynck@gmail.com>",
