@@ -14,9 +14,9 @@ export default {
     /**
      * Tell the tool consumer to resize the iframe.
      */
-    frameResize() {
+    frameResize(height) {
         postMessage('frameResize', {
-            height: document.documentElement.scrollHeight
+            height: height && Number(height) || document.documentElement.scrollHeight
         });
     },
     
