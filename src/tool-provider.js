@@ -14,7 +14,7 @@ export default {
     /**
      * Tell the tool consumer to resize the iframe.
      */
-    frameResize: function () {
+    frameResize() {
         postMessage('frameResize', {
             height: document.documentElement.scrollHeight
         });
@@ -23,7 +23,7 @@ export default {
     /**
      * Tell the tool consumer to show the module navigation.
      */
-    showModuleNavigation: function () {
+    showModuleNavigation() {
         postMessage('showModuleNavigation', {
             show: true
         });
@@ -32,7 +32,7 @@ export default {
     /**
      * Tell the tool consumer to hide the module navigation.
      */
-    hideModuleNavigation: function () {
+    hideModuleNavigation() {
         postMessage('showModuleNavigation', {
             show: false
         });
@@ -41,14 +41,14 @@ export default {
     /**
      * Tell the tool consumer to scroll to top.
      */
-    scrollToTop: function () {
+    scrollToTop() {
         postMessage('scrollToTop');
     },
     
     /**
      * Tell the tool consumer to navigate home
      */
-    navigateHome: function () {
+    navigateHome() {
         postMessage('navigation', {
             location: 'home'
         });
@@ -57,7 +57,7 @@ export default {
     /**
      * Tell the tool consumer to navigate to the next item
      */
-    navigateNext: function () {
+    navigateNext() {
         postMessage('navigation', {
             location: 'next'
         });
@@ -66,7 +66,7 @@ export default {
     /**
      * Tell the tool consumer to navigate to the previous item
      */
-    navigatePrevious: function () {
+    navigatePrevious() {
         postMessage('navigation', {
             location: 'previous'
         });
