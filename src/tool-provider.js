@@ -15,8 +15,14 @@ export default {
      * Tell the tool consumer to resize the iframe.
      */
     frameResize(height) {
+        if (height === undefined) {
+            height = Math.round(document.documentElement.getBoundingClientRect().height);
+        } else {
+            height = Number(height);
+        }
+        
         postMessage('frameResize', {
-            height: height && Number(height) || document.documentElement.scrollHeight
+            height: height
         });
     },
     
