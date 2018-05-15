@@ -16,7 +16,7 @@
   },
   "scripts": {
     "build:compile": "babel src --out-dir lib",
-	"build:minify": "uglifyjs lib/tool-provider.js --mangle --output lib/tool-provider.min.js",
+	"build:minify": "uglifyjs lib/tool-provider.js --mangle --compress --toplevel --output lib/tool-provider.min.js",
 	"build": "npm run build:compile && npm run build:minify",
 	"prepare": "npm run build"
   }
