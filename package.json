@@ -6,6 +6,9 @@
   "author": "Renaat De Muynck <renaat.demuynck@gmail.com>",
   "homepage": "https://github.com/renaatdemuynck/LTI-Messaging",
   "main": "lib/tool-provider.js",
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0"
