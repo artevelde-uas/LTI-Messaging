@@ -18,5 +18,6 @@
     "build:babel": "babel src --out-dir lib",
 	"build:uglify": "uglifyjs lib/tool-provider.js -m -o lib/tool-provider.min.js",
 	"build": "npm run build:babel && npm run build:uglify"
+	"prepare": "npm run build"
   }
 }
