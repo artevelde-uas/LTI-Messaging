@@ -15,9 +15,9 @@
     "uglify-js": "^3.3.25"
   },
   "scripts": {
-    "build:babel": "babel src --out-dir lib",
-	"build:uglify": "uglifyjs lib/tool-provider.js -m -o lib/tool-provider.min.js",
-	"build": "npm run build:babel && npm run build:uglify"
+    "build:compile": "babel src --out-dir lib",
+	"build:minify": "uglifyjs lib/tool-provider.js --mangle --output lib/tool-provider.min.js",
+	"build": "npm run build:compile && npm run build:minify",
 	"prepare": "npm run build"
   }
 }
