@@ -1,6 +1,6 @@
 {
   "name": "lti-messaging",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "LTI Iframe parent.postMessage communication messages",
   "license": "MIT",
   "author": "Renaat De Muynck <renaat.demuynck@gmail.com>",
@@ -11,9 +11,12 @@
   ],
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "uglify-js": "^3.3.25"
   },
   "scripts": {
-    "build": "babel src --out-dir lib"
+    "build:babel": "babel src --out-dir lib",
+	"build:uglify": "uglifyjs lib/tool-provider.js -m -o lib/tool-provider.min.js",
+	"build": "npm run build:babel && npm run build:uglify"
   }
 }
