@@ -18,7 +18,7 @@ export default {
         if (height === undefined) {
             height = Math.round(document.documentElement.getBoundingClientRect().height);
         } else {
-            height = Number(height);
+            height = parseInt(height, 10);
         }
         
         postMessage('frameResize', {
