@@ -1,23 +1,27 @@
 {
   "name": "lti-messaging",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "LTI Iframe parent.postMessage communication messages",
   "license": "MIT",
   "author": "Renaat De Muynck <renaat.demuynck@gmail.com>",
   "homepage": "https://github.com/renaatdemuynck/LTI-Messaging",
   "main": "lib/tool-provider.js",
+  "browser": "dist/tool-provider.min.js",
   "files": [
-    "lib"
+    "lib",
+    "dist"
   ],
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "rollup": "^0.59.0",
+    "rollup-plugin-babel": "^3.0.4",
     "uglify-js": "^3.3.25"
   },
   "scripts": {
-    "build:compile": "babel src --out-dir lib",
-	"build:minify": "uglifyjs lib/tool-provider.js --mangle --compress --toplevel --output lib/tool-provider.min.js",
-	"build": "npm run build:compile && npm run build:minify",
-	"prepare": "npm run build"
+    "build:compile": "babel src --out-dir lib && rollup --config",
+    "build:minify": "uglifyjs dist/tool-provider.js --mangle --compress --output dist/tool-provider.min.js",
+    "build": "npm run build:compile && npm run build:minify",
+    "prepare": "npm run build"
   }
 }
