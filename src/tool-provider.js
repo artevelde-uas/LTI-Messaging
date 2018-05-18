@@ -76,6 +76,40 @@ export default {
         postMessage('navigation', {
             location: 'previous'
         });
+    },
+    
+    /**
+     * Tell the tool consumer to show a message before navigating away
+     */
+    setUnloadMessage(message) {
+        postMessage('setUnloadMessage', {
+            message: message
+        });
+    },
+    
+    /**
+     * Tell the tool consumer to remove the unload message
+     */
+    removeUnloadMessagem(message) {
+        postMessage('removeUnloadMessage', {
+            message: message
+        });
+    },
+    
+    /**
+     * Tell the tool consumer to send a message to the screen reader
+     */
+    screenReaderAlert(body) {
+        postMessage('screenReaderAlert', {
+            body: body
+        });
+    },
+    
+    /**
+     * Tell the tool consumer to reload the iframe
+     */
+    pageRefresh() {
+        postMessage('pageRefresh');
     }
     
 };
