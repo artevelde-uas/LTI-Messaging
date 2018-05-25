@@ -5,6 +5,9 @@
  */
 
 function postMessage(subject, params) {
+    if (params === undefined) {
+        params = {};
+    }
     params.subject = `lti.${subject}`;
     window.parent.postMessage(JSON.stringify(params), '*');
 }
