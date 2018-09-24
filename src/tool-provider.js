@@ -93,7 +93,7 @@ export default {
     /**
      * Tell the tool consumer to remove the unload message
      */
-    removeUnloadMessagem(message) {
+    removeUnloadMessage(message) {
         postMessage('removeUnloadMessage', {
             message: message
         });
