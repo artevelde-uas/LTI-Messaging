@@ -1,4 +1,4 @@
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 
 
 export default {
@@ -13,7 +13,9 @@ export default {
             babelrc: false,
             exclude: 'node_modules/**',
             presets: [
-                ["env", { modules: false }]
+                ['@babel/preset-env', {
+                    modules: false
+                }]
             ],
             comments: false
         })
