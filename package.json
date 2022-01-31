@@ -5,7 +5,8 @@
   "license": "MIT",
   "author": "Renaat De Muynck <renaat.demuynck@gmail.com>",
   "homepage": "https://github.com/renaatdemuynck/LTI-Messaging",
-  "main": "lib/tool-provider.js",
+  "main": "dist/tool-provider.cjs.js",
+  "module": "dist/tool-provider.esm.js",
   "browser": "dist/tool-provider.min.js",
   "files": [
     "lib",
