@@ -1,5 +1,6 @@
 /**
  * @file Provides an object to send LTI Iframe communication messages to an LTI tool consumer
+ * @module ToolProvider
  * @author Renaat De Muynck <renaat.demuynck@arteveldehs.be>
  * @license MIT
  */
@@ -16,6 +17,8 @@ function postMessage(subject, params) {
 
 /**
  * Tell the tool consumer to resize the iframe.
+ * 
+ * @param {number} height The height to set the iframe to
  */
 function frameResize(height) {
     if (height === undefined) {
@@ -83,6 +86,8 @@ function navigatePrevious() {
 
 /**
  * Tell the tool consumer to show a message before navigating away
+ * 
+ * @param {string} message The message to send
  */
 function setUnloadMessage(message) {
     postMessage('setUnloadMessage', {
@@ -92,6 +97,8 @@ function setUnloadMessage(message) {
 
 /**
  * Tell the tool consumer to remove the unload message
+ * 
+ * @param {string} message The message to send
  */
 function removeUnloadMessage(message) {
     postMessage('removeUnloadMessage', {
@@ -101,6 +108,8 @@ function removeUnloadMessage(message) {
 
 /**
  * Tell the tool consumer to send a message to the screen reader
+ * 
+ * @param {string} body The message body to send
  */
 function screenReaderAlert(body) {
     postMessage('screenReaderAlert', {
