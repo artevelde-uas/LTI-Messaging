@@ -1,6 +1,6 @@
 /**
  * @file Provides an object to send LTI Iframe communication messages to an LTI tool consumer
- * @author Renaat De Muynck <renaat.demuynck@gmail.com>
+ * @author Renaat De Muynck <renaat.demuynck@arteveldehs.be>
  * @license MIT
  */
 
