@@ -10,8 +10,7 @@
   "module": "dist/tool-provider.esm.js",
   "browser": "dist/tool-provider.min.js",
   "files": [
-    "dist",
-    "docs"
+    "dist"
   ],
   "devDependencies": {
     "@babel/core": "^7.16.12",
