@@ -2,7 +2,7 @@
   "name": "lti-messaging",
   "version": "0.6.2",
   "description": "LTI Iframe parent.postMessage communication messages",
-  "license": "MIT",
+  "license": "ISC",
   "author": "Renaat De Muynck <renaat.demuynck@arteveldehs.be>",
   "repository": "https://github.com/artevelde-uas/LTI-Messaging.git",
   "homepage": "https://github.com/artevelde-uas/LTI-Messaging",
