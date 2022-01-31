@@ -28,7 +28,7 @@ function frameResize(height) {
     }
 
     postMessage('frameResize', {
-        height: height
+        height
     });
 }
 
@@ -91,7 +91,7 @@ function navigatePrevious() {
  */
 function setUnloadMessage(message) {
     postMessage('setUnloadMessage', {
-        message: message
+        message
     });
 }
 
@@ -102,7 +102,7 @@ function setUnloadMessage(message) {
  */
 function removeUnloadMessage(message) {
     postMessage('removeUnloadMessage', {
-        message: message
+        message
     });
 }
 
@@ -113,7 +113,7 @@ function removeUnloadMessage(message) {
  */
 function screenReaderAlert(body) {
     postMessage('screenReaderAlert', {
-        body: body
+        body
     });
 }
 
