@@ -13,107 +13,119 @@ function postMessage(subject, params) {
     window.parent.postMessage(JSON.stringify(params), '*');
 }
 
-export default {
 
-    /**
-     * Tell the tool consumer to resize the iframe.
-     */
-    frameResize(height) {
-        if (height === undefined) {
-            height = Math.round(document.documentElement.getBoundingClientRect().height);
-        } else {
-            height = parseInt(height, 10);
-        }
-
-        postMessage('frameResize', {
-            height: height
-        });
-    },
-
-    /**
-     * Tell the tool consumer to show the module navigation.
-     */
-    showModuleNavigation() {
-        postMessage('showModuleNavigation', {
-            show: true
-        });
-    },
-
-    /**
-     * Tell the tool consumer to hide the module navigation.
-     */
-    hideModuleNavigation() {
-        postMessage('showModuleNavigation', {
-            show: false
-        });
-    },
-
-    /**
-     * Tell the tool consumer to scroll to top.
-     */
-    scrollToTop() {
-        postMessage('scrollToTop');
-    },
-
-    /**
-     * Tell the tool consumer to navigate home
-     */
-    navigateHome() {
-        postMessage('navigation', {
-            location: 'home'
-        });
-    },
-
-    /**
-     * Tell the tool consumer to navigate to the next item
-     */
-    navigateNext() {
-        postMessage('navigation', {
-            location: 'next'
-        });
-    },
-
-    /**
-     * Tell the tool consumer to navigate to the previous item
-     */
-    navigatePrevious() {
-        postMessage('navigation', {
-            location: 'previous'
-        });
-    },
-
-    /**
-     * Tell the tool consumer to show a message before navigating away
-     */
-    setUnloadMessage(message) {
-        postMessage('setUnloadMessage', {
-            message: message
-        });
-    },
-
-    /**
-     * Tell the tool consumer to remove the unload message
-     */
-    removeUnloadMessage(message) {
-        postMessage('removeUnloadMessage', {
-            message: message
-        });
-    },
-
-    /**
-     * Tell the tool consumer to send a message to the screen reader
-     */
-    screenReaderAlert(body) {
-        postMessage('screenReaderAlert', {
-            body: body
-        });
-    },
-
-    /**
-     * Tell the tool consumer to reload the iframe
-     */
-    pageRefresh() {
-        postMessage('pageRefresh');
+/**
+ * Tell the tool consumer to resize the iframe.
+ */
+function frameResize(height) {
+    if (height === undefined) {
+        height = Math.round(document.documentElement.getBoundingClientRect().height);
+    } else {
+        height = parseInt(height, 10);
     }
 
+    postMessage('frameResize', {
+        height: height
+    });
+}
+
+/**
+ * Tell the tool consumer to show the module navigation.
+ */
+function showModuleNavigation() {
+    postMessage('showModuleNavigation', {
+        show: true
+    });
+}
+
+/**
+ * Tell the tool consumer to hide the module navigation.
+ */
+function hideModuleNavigation() {
+    postMessage('showModuleNavigation', {
+        show: false
+    });
+}
+
+/**
+ * Tell the tool consumer to scroll to top.
+ */
+function scrollToTop() {
+    postMessage('scrollToTop');
+}
+
+/**
+ * Tell the tool consumer to navigate home
+ */
+function navigateHome() {
+    postMessage('navigation', {
+        location: 'home'
+    });
+}
+
+/**
+ * Tell the tool consumer to navigate to the next item
+ */
+function navigateNext() {
+    postMessage('navigation', {
+        location: 'next'
+    });
+}
+
+/**
+ * Tell the tool consumer to navigate to the previous item
+ */
+function navigatePrevious() {
+    postMessage('navigation', {
+        location: 'previous'
+    });
+}
+
+/**
+ * Tell the tool consumer to show a message before navigating away
+ */
+function setUnloadMessage(message) {
+    postMessage('setUnloadMessage', {
+        message: message
+    });
+}
+
+/**
+ * Tell the tool consumer to remove the unload message
+ */
+function removeUnloadMessage(message) {
+    postMessage('removeUnloadMessage', {
+        message: message
+    });
+}
+
+/**
+ * Tell the tool consumer to send a message to the screen reader
+ */
+function screenReaderAlert(body) {
+    postMessage('screenReaderAlert', {
+        body: body
+    });
+}
+
+/**
+ * Tell the tool consumer to reload the iframe
+ */
+function pageRefresh() {
+    postMessage('pageRefresh');
+}
+
+
+export default {
+    frameResize,
+    showModuleNavigation,
+    hideModuleNavigation,
+    scrollToTop,
+    navigateHome,
+    navigateNext,
+    navigatePrevious,
+    setUnloadMessage,
+    removeUnloadMessage,
+    screenReaderAlert,
+    pageRefresh
 };
