@@ -2,7 +2,7 @@ import babel from '@rollup/plugin-babel';
 
 
 export default {
-    input: 'src/tool-provider.js',
+    input: 'src/index.js',
     output: [
         {
             file: 'dist/tool-provider.js',

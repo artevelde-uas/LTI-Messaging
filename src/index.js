@@ -4,6 +4,7 @@
  * @license MIT
  */
 
+
 function postMessage(subject, params) {
     if (params === undefined) {
         params = {};
@@ -13,7 +14,7 @@ function postMessage(subject, params) {
 }
 
 export default {
-    
+
     /**
      * Tell the tool consumer to resize the iframe.
      */
@@ -23,12 +24,12 @@ export default {
         } else {
             height = parseInt(height, 10);
         }
-        
+
         postMessage('frameResize', {
             height: height
         });
     },
-    
+
     /**
      * Tell the tool consumer to show the module navigation.
      */
@@ -37,7 +38,7 @@ export default {
             show: true
         });
     },
-    
+
     /**
      * Tell the tool consumer to hide the module navigation.
      */
@@ -46,14 +47,14 @@ export default {
             show: false
         });
     },
-    
+
     /**
      * Tell the tool consumer to scroll to top.
      */
     scrollToTop() {
         postMessage('scrollToTop');
     },
-    
+
     /**
      * Tell the tool consumer to navigate home
      */
@@ -62,7 +63,7 @@ export default {
             location: 'home'
         });
     },
-    
+
     /**
      * Tell the tool consumer to navigate to the next item
      */
@@ -71,7 +72,7 @@ export default {
             location: 'next'
         });
     },
-    
+
     /**
      * Tell the tool consumer to navigate to the previous item
      */
@@ -80,7 +81,7 @@ export default {
             location: 'previous'
         });
     },
-    
+
     /**
      * Tell the tool consumer to show a message before navigating away
      */
@@ -89,7 +90,7 @@ export default {
             message: message
         });
     },
-    
+
     /**
      * Tell the tool consumer to remove the unload message
      */
@@ -98,7 +99,7 @@ export default {
             message: message
         });
     },
-    
+
     /**
      * Tell the tool consumer to send a message to the screen reader
      */
@@ -107,12 +108,12 @@ export default {
             body: body
         });
     },
-    
+
     /**
      * Tell the tool consumer to reload the iframe
      */
     pageRefresh() {
         postMessage('pageRefresh');
     }
-    
+
 };
