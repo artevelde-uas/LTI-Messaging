@@ -18,6 +18,7 @@ function postMessage(subject, params) {
 /**
  * Tell the tool consumer to resize the iframe.
  * 
+ * @static
  * @param {number} height The height to set the iframe to
  */
 function frameResize(height) {
@@ -34,6 +35,8 @@ function frameResize(height) {
 
 /**
  * Tell the tool consumer to show the module navigation.
+ * 
+ * @static
  */
 function showModuleNavigation() {
     postMessage('showModuleNavigation', {
@@ -43,6 +46,8 @@ function showModuleNavigation() {
 
 /**
  * Tell the tool consumer to hide the module navigation.
+ * 
+ * @static
  */
 function hideModuleNavigation() {
     postMessage('showModuleNavigation', {
@@ -52,6 +57,8 @@ function hideModuleNavigation() {
 
 /**
  * Tell the tool consumer to scroll to top.
+ * 
+ * @static
  */
 function scrollToTop() {
     postMessage('scrollToTop');
@@ -59,6 +66,8 @@ function scrollToTop() {
 
 /**
  * Tell the tool consumer to navigate home
+ * 
+ * @static
  */
 function navigateHome() {
     postMessage('navigation', {
@@ -68,6 +77,8 @@ function navigateHome() {
 
 /**
  * Tell the tool consumer to navigate to the next item
+ * 
+ * @static
  */
 function navigateNext() {
     postMessage('navigation', {
@@ -77,6 +88,8 @@ function navigateNext() {
 
 /**
  * Tell the tool consumer to navigate to the previous item
+ * 
+ * @static
  */
 function navigatePrevious() {
     postMessage('navigation', {
@@ -87,6 +100,7 @@ function navigatePrevious() {
 /**
  * Tell the tool consumer to show a message before navigating away
  * 
+ * @static
  * @param {string} message The message to send
  */
 function setUnloadMessage(message) {
@@ -98,6 +112,7 @@ function setUnloadMessage(message) {
 /**
  * Tell the tool consumer to remove the unload message
  * 
+ * @static
  * @param {string} message The message to send
  */
 function removeUnloadMessage(message) {
@@ -109,6 +124,7 @@ function removeUnloadMessage(message) {
 /**
  * Tell the tool consumer to send a message to the screen reader
  * 
+ * @static
  * @param {string} body The message body to send
  */
 function screenReaderAlert(body) {
@@ -119,6 +135,8 @@ function screenReaderAlert(body) {
 
 /**
  * Tell the tool consumer to reload the iframe
+ * 
+ * @static
  */
 function pageRefresh() {
     postMessage('pageRefresh');
