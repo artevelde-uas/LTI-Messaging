@@ -27,4 +27,4 @@ import ToolProvider from 'lti-messaging';
 ToolProvider.frameResize(500);
 ```
 
-For more information see '[API documentation](docs/api.md)'.
+For more information see [API documentation](docs/API.md).
